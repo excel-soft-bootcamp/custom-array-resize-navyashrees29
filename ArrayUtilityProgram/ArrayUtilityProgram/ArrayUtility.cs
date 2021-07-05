@@ -10,13 +10,14 @@ namespace ArrayUtilityProgram
     {
         public static void Resize(ref int[] array, int newSize)
         {
-            array = new int[newSize];
-            int[] array1 = new int[newSize];
+            
+            int[] temp = new int[newSize];
           
            for (int i=0;i<array.Length;i++)
             {
-                array[i] = array1[i];
+                temp[i] = array[i];
             }
+            array=temp;
 
         }
     }
